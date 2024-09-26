@@ -2,8 +2,10 @@ import React from 'react';
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ChatBot from '../components/ChatBot'; // Asegúrate de que esté bien importado
 import localFont from 'next/font/local';
 
+// Cargando las fuentes locales
 const geist = localFont({
   src: './fonts/GeistVF.woff',
   display: 'swap',
@@ -23,12 +25,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="min-h-screen flex flex-col">
+      <body className={`min-h-screen flex flex-col ${geist.variable} ${geistMono.variable}`}>
         <Header />
         <main className="flex-grow">
           {children}
         </main>
         <Footer />
+        {/* Chatbot flotante */}
+        <ChatBot />
       </body>
     </html>
   );

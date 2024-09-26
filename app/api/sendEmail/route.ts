@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'pathwalkingtechnology@gmail.com',
+      user: 'miltonmdecampos@gmail.com',
       pass: 'edio eplb dmqs ffgv', // Usa una App Password en lugar de tu contraseña real
     },
   });

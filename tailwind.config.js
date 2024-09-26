@@ -5,6 +5,8 @@ module.exports = {
       colors: {
         primary: '#3498db',    // Azul claro
         secondary: '#2ecc71',  // Verde claro
+        pathOrange: '#FF4B2C',
+        pathBlue: '#081E33',
         background: '#f7f7f7', // Gris claro
         text: '#333333',       // Gris oscuro
       },

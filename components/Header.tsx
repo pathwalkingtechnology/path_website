@@ -1,24 +1,25 @@
-import React from 'react';;
+import React from 'react';
 import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-primary text-white py-4 shadow-md">
+    <header className="bg-transparent py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
+          {/* Logo */}
           <img src="/logo-web.png" alt="Path Logo" className="w-32" />
         </div>
         <nav className="flex space-x-6">
-          <Link href="/" className="hover:text-secondary">
+          <Link href="/" className="text-black hover:text-gray-700 transition-colors duration-300">
             Inicio
           </Link>
-          <Link href="/nosotros" className="hover:text-secondary">
+          <Link href="/nosotros" className="text-black hover:text-gray-700 transition-colors duration-300">
             Nosotros
           </Link>
-          <Link href="/servicios" className="hover:text-secondary">
+          <Link href="/servicios" className="text-black hover:text-gray-700 transition-colors duration-300">
             Servicios
           </Link>
-          <Link href="/contacto" className="hover:text-secondary">
+          <Link href="/contacto" className="text-black hover:text-gray-700 transition-colors duration-300">
             Contacto
           </Link>
         </nav>
@@ -26,3 +27,4 @@ export default function Header() {
     </header>
   );
 }
+
