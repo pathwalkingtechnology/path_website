@@ -1,7 +1,6 @@
 import React from 'react';
 import './globals.css';
 import Link from 'next/link';
-import Chatbot from '../components/Chatbot';
 
 export default function Home() {
   return (

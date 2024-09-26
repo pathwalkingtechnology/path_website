@@ -1,70 +1,45 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Para las animaciones suaves
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState([
-    { text: 'Hola! Soy Path, tu asistente virtual. ¿En qué puedo ayudarte?', sender: 'bot' }
-  ]);
-  const [input, setInput] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-  };
-
-  const handleSendMessage = () => {
-    if (input.trim() === '') return;
-
-    // Agrega el mensaje del usuario
-    const newMessages = [...messages, { text: input, sender: 'user' }];
-    setMessages(newMessages);
-
-    // Respuesta del bot
-    setTimeout(() => {
-      let botResponse = '';
-      if (input.toLowerCase().includes('hola')) {
-        botResponse = '¡Hola! ¿Te gustaría dejarnos tu correo o teléfono para que nos contactemos contigo?';
-      } else if (input.toLowerCase().includes('gracias')) {
-        botResponse = '¡De nada! Estamos aquí para ayudarte.';
-      } else {
-        botResponse = 'Por ahora solo puedo responder consultas sobre contacto. Puedes dejar tu correo o móvil para que nos comuniquemos contigo.';
-      }
-
-      setMessages(prevMessages => [...prevMessages, { text: botResponse, sender: 'bot' }]);
-    }, 1000);
-
-    // Limpia el input después de enviar el mensaje
-    setInput('');
+  // Función para manejar la apertura/cierre del chatbot
+  const toggleChatbot = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 w-80">
-      <div className="h-64 overflow-y-auto p-2">
-        {messages.map((message, index) => (
-          <div key={index} className={`my-2 ${message.sender === 'bot' ? 'text-left' : 'text-right'}`}>
-            <span
-              className={`inline-block p-2 rounded-lg ${
-                message.sender === 'bot' ? 'bg-primary text-white' : 'bg-secondary text-white'
-              }`}
-            >
-              {message.text}
-            </span>
-          </div>
-        ))}
+    <div>
+      {/* Botón flotante para abrir el chatbot */}
+      <div 
+        className="fixed bottom-5 right-5 bg-primary p-4 rounded-full shadow-lg cursor-pointer hover:bg-secondary transition duration-300"
+        onClick={toggleChatbot}
+      >
+        💬 {/* Este es el ícono del chatbot, puedes cambiarlo por una imagen */}
       </div>
-      <div className="flex items-center">
-        <input
-          type="text"
-          value={input}
-          onChange={handleInputChange}
-          className="w-full border rounded-l-lg p-2 focus:outline-none"
-          placeholder="Escribe tu mensaje..."
-        />
-        <button
-          onClick={handleSendMessage}
-          className="bg-primary text-white rounded-r-lg px-4 py-2 hover:bg-secondary transition duration-300"
+
+      {/* Ventana flotante del chatbot */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className="fixed bottom-16 right-5 bg-white w-80 h-96 p-4 rounded-lg shadow-xl z-50"
         >
-          Enviar
-        </button>
-      </div>
+          {/* Cabecera del chatbot */}
+          <div className="flex justify-between items-center border-b pb-2">
+            <h3 className="text-lg font-bold text-primary">Chatbot</h3>
+            <button onClick={toggleChatbot} className="text-secondary font-bold">✕</button>
+          </div>
+
+          {/* Contenido del chatbot */}
+          <div className="mt-4">
+            <p>¡Hola! ¿En qué puedo ayudarte?</p>
+            {/* Aquí puedes integrar una simple caja de texto para el chat o un iframe con un servicio de chatbot AI */}
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 }

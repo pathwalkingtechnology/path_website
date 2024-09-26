@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import '../globals.css';
 import Link from 'next/link';
 
+
 export default function Contacto() {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -18,12 +19,30 @@ export default function Contacto() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Aquí iría la lógica para enviar el formulario
-    console.log('Formulario enviado:', formData);
-    alert('Gracias por contactarnos, te responderemos pronto.');
-  };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert('Gracias por contactarnos, te responderemos pronto.');
+      setFormData({ nombre: '', email: '', mensaje: '' });
+    } else {
+      alert('Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.');
+    }
+  } catch (error) {
+    console.error('Error enviando el formulario:', error);
+    alert('Hubo un error al enviar tu mensaje.');
+  }
+};
+
 
   return (
     <main className="bg-background min-h-screen p-8">
@@ -43,7 +62,7 @@ export default function Contacto() {
           Escríbenos por WhatsApp
         </a>
       </section>
-                                              
+
       {/* Formulario de Contacto */}
       <section className="max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg">
         <form onSubmit={handleSubmit}>
