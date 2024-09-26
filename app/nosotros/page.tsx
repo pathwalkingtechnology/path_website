@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import '../globals.css'; 
 export default function Nosotros() {
@@ -60,7 +61,7 @@ export default function Nosotros() {
           {/* Placeholder para las imágenes del equipo */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-100 p-6 text-center rounded-lg shadow-md transition duration-300 hover:shadow-lg">
-              <img src="/mil.png" alt="Equipo" className="mx-auto w-32 mb-4 rounded-full" />
+              <img src="/mil.png" alt="Equipo" className="mx-auto w-32 mb-4 rounded-full" /> {/* eslint-disable-next-line @next/next/no-img-element */}
               <h3 className="text-xl font-bold">Milton M. De Campos</h3>
               <p className="text-gray-500">CEO & Fundador</p>
               <button className="mt-4 bg-secondary text-white py-2 px-4 rounded hover:bg-green-500 transition duration-300">

@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import './globals.css';
 import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -31,7 +33,7 @@ export default function Home() {
               <p className="text-lg">Creamos sitios web a medida para potenciar tu negocio.</p>
             </div>
             <div className="w-1/3 mb-8">
-              <img src="/diseno-grafico.png" alt="E-commerce" className="mb-4" />
+              <img src="/diseno-grafico.png" alt="E-commerce" className="mb-4" /> {/* eslint-disable-next-line @next/next/no-img-element */}
               <h3 className="text-2xl font-bold">E-commerce</h3>
               <p className="text-lg">Lleva tu tienda al siguiente nivel con nuestras soluciones.</p>
             </div>

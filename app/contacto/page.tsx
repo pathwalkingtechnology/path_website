@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";  // Esto marca el componente como un Client Component
 import React, { useState } from 'react';
 import '../globals.css';
-import Link from 'next/link';
 
 
 export default function Contacto() {

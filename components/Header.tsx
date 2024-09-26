@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Link from 'next/link';
+
 
 export default function Header() {
   return (
@@ -7,7 +9,7 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
           {/* Logo */}
-          <img src="/logo-web.png" alt="Path Logo" className="w-32" />
+          <img src="/logo-web.png" alt="Path Logo" className="w-32" /> {/* eslint-disable-next-line @next/next/no-img-element */}
         </div>
         <nav className="flex space-x-6">
           <Link href="/" className="text-black hover:text-gray-700 transition-colors duration-300">

@@ -1,4 +1,4 @@
-{ NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 // Configurar POST para recibir el contacto del formulario
