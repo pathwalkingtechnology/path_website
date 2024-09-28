@@ -1,0 +1,32 @@
+/*Encabezado y menu principal*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--background);
+}
+
+.header a {
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header a:hover {
+  color: var(--secondary); /* Cambia de color al pasar el cursor */
+}
+
+.logo {
+  width: 150px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 1rem;
+}
+
+/*Fin menu principal*/

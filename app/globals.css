@@ -3,59 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #1E3A8A;   /* Azul oscuro */
+  --secondary: #1F9E4A; /* Verde elegante */
+  --background: #f5f5f5; /* Fondo oscuro */
+  --foreground: #f7f7f7; /* Texto claro */
+  --font-main: 'Open Sans', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
 }
 
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  /*Inicio chatbot*/
-}
-.chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  height: 400px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Para asegurarte de que esté por encima de otros elementos */
+h1, h2 {
+  font-family: var(--font-title);
 }
 
-.chatbot-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #3498db; /* Botón llamativo */
-  border: none;
+button {
+  font-family: var(--font-title);
+  cursor: pointer;
+}
+
+.primaryBtn {
+  background-color: var(--primary);
   color: white;
   padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  z-index: 1000;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.chatbot-open {
-  display: block;
+.primaryBtn:hover {
+  background-color: #1c1c96; /* Más oscuro al pasar el cursor */
 }
 
-.chatbot-closed {
-  display: none;
+.secondaryBtn {
+  background-color: var(--secondary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
-/*Fin chatbot*/
+
+.secondaryBtn:hover {
+  background-color: #1a8c43; /* Más oscuro al pasar el cursor */
+}

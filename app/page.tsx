@@ -1,63 +1,45 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import './globals.css';
-import Link from 'next/link';
-
+import Image from 'next/image';
+import styles from './globals.css';
 
 export default function Home() {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-primary text-white py-20 text-center">
-        <div className="container mx-auto">
-          <h1 className="text-5xl font-bold mb-4">Bienvenidos a Path</h1>
-          <p className="text-xl mb-8">
-            Transformamos negocios con soluciones tecnológicas personalizadas
-          </p>
-          <Link href="/contacto">
-            <button className="bg-secondary text-white py-3 px-6 rounded hover:bg-green-600">
-              ¡Contáctanos ahora!
-            </button>
-          </Link>
+    <div className={styles.container}>
+      {/* Hero section similar to Next.js */}
+      <section className={styles.hero}>
+        <h1 className={styles.title}>Path - Walking Technology</h1>
+        <p className={styles.description}>
+          Empowering businesses with innovative technology solutions.
+        </p>
+        <div className={styles.buttons}>
+          <button className={styles.primaryBtn}>Get Started</button>
+          <button className={styles.secondaryBtn}>Learn More</button>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-gray-100 text-center">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold mb-12">Nuestros Servicios</h2>
-          <div className="flex flex-wrap justify-center space-x-8">
-            <div className="w-1/3 mb-8">
-              <img src="/integracion-whatsapp.png" alt="Desarrollo Web" className="mb-4" />
-              <h3 className="text-2xl font-bold">Desarrollo Web</h3>
-              <p className="text-lg">Creamos sitios web a medida para potenciar tu negocio.</p>
-            </div>
-            <div className="w-1/3 mb-8">
-              <img src="/diseno-grafico.png" alt="E-commerce" className="mb-4" /> {/* eslint-disable-next-line @next/next/no-img-element */}
-              <h3 className="text-2xl font-bold">E-commerce</h3>
-              <p className="text-lg">Lleva tu tienda al siguiente nivel con nuestras soluciones.</p>
-            </div>
-            <div className="w-1/3 mb-8">
-              <img src="/desarrollo-web.png" alt="Marketing Digital" className="mb-4" />
-              <h3 className="text-2xl font-bold">Marketing Digital</h3>
-              <p className="text-lg">Aumenta tu presencia online y alcanza nuevos clientes.</p>
-            </div>
-          </div>
+      {/* Sección de Servicios */}
+      <section className={styles.services}>
+        <div className={styles.serviceItem}>
+          <h2>Development</h2>
+          <p>We offer state-of-the-art development solutions to help your business thrive.</p>
+        </div>
+        <div className={styles.serviceItem}>
+          <h2>Graphic Design</h2>
+          <p>Our creative team brings your brand to life with stunning visuals.</p>
         </div>
       </section>
 
-      {/* Contact CTA Section */}
-      <section className="bg-secondary text-white py-12 text-center">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold mb-4">¿Listo para transformar tu negocio?</h2>
-          <p className="text-lg mb-8">Contáctanos para una consulta gratuita.</p>
-          <Link href="/contacto">
-            <button className="bg-white text-primary py-3 px-6 rounded hover:bg-gray-200">
-              ¡Solicita una consulta!
-            </button>
-          </Link>
-        </div>
+      {/* Built on a foundation */}
+      <section className={styles.foundation}>
+        <Image
+          src="/takeover.avif"  // Imagen placeholder
+          alt="Built on a foundation of fast, production-grade tooling"
+          width={700}
+          height={400}
+          className={styles.foundationImage}
+        />
+        <h2>Built on a foundation of fast, production-grade tooling</h2>
       </section>
     </div>
   );
 }
+

@@ -3,18 +3,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#3498db',    // Azul claro
-        secondary: '#2ecc71',  // Verde claro
+        primary: '#1E3A8A',    // Azul oscuro
+        secondary: '#1F9E4A',  // Verde sobrio
         pathOrange: '#FF4B2C',
         pathBlue: '#081E33',
-        background: '#f7f7f7', // Gris claro
-        text: '#333333',       // Gris oscuro
+        background: '#1a1a1a', // Fondo oscuro inmersivo
+        text: '#f7f7f7',       // Texto claro
       },
       fontFamily: {
         sans: ['Open Sans', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
-        geist: ['GeistVF', 'sans-serif'], // Aquí agregamos la fuente Geist
-        geistMono: ['GeistMonoVF', 'monospace'], // Agregamos la fuente Geist Mono
+        geist: ['GeistVF', 'sans-serif'], // Fuente Geist
+        geistMono: ['GeistMonoVF', 'monospace'], // Fuente Geist Mono
       },
     },
   },
