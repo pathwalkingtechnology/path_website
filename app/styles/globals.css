@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1E3A8A;   /* Azul oscuro */
+  --secondary: #1F9E4A; /* Verde elegante */
+  --background: #f5f5f5; /* Fondo oscuro */
+  --foreground: #f7f7f7; /* Texto claro */
+  --font-main: 'Open Sans', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-main);
+}
+
+h1, h2 {
+  font-family: var(--font-title);
+}
+
+button {
+  font-family: var(--font-title);
+  cursor: pointer;
+}
+
+.primaryBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #1c1c96; /* Más oscuro al pasar el cursor */
+}
+
+.secondaryBtn {
+  background-color: var(--secondary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #1a8c43; /* Más oscuro al pasar el cursor */
+}

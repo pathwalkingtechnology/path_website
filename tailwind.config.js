@@ -7,7 +7,7 @@ module.exports = {
         secondary: '#1F9E4A',  // Verde sobrio
         pathOrange: '#FF4B2C',
         pathBlue: '#081E33',
-        background: '#1a1a1a', // Fondo oscuro inmersivo
+        background: '#f5f5f5', // Fondo oscuro inmersivo
         text: '#f7f7f7',       // Texto claro
       },
       fontFamily: {

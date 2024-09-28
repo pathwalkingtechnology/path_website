@@ -1,9 +1,9 @@
-/* Header.tsx */
+/* eslint-disable */
 "use client";  // Esto marca el componente como un Client Component
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './globals.css'; // Asegúrate de importar el archivo de estilos
+import styles from './globals.css'; 
 
 export default function Header() {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'} fixed top-0 left-0 w-full z-50 transition-colors duration-300 py-4`}>
+    <header className={`${isScrolled ? 'bg-transparent' : 'bg-white shadow-md'} fixed top-0 left-0 w-full z-50 transition-colors duration-300 py-4`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
           {/* Logo */}
