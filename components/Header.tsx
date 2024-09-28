@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './globals.css'; 
 
 export default function Header() {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
@@ -44,32 +43,9 @@ export default function Header() {
           <Link href="/nosotros" className={`text-black hover:text-gray-700 transition-colors duration-300`}>
             Nosotros
           </Link>
-          <div className="relative">
-            <button
-              className={`text-black hover:text-gray-700 transition-colors duration-300 flex items-center`}
-              onMouseOver={toggleSubmenu}
-              onMouseOut={() => setIsSubmenuOpen(false)}
-            >
-              Servicios
-              <span className="ml-2">
-                {isSubmenuOpen ? '-' : '+'}
-              </span>
-            </button>
-            {isSubmenuOpen && (
-              <ul className="absolute top-full mt-2 left-0 bg-white border border-gray-200 shadow-lg rounded-md">
-                <li className="p-2">
-                  <Link href="/servicios/desarrollo" className="block text-black hover:text-gray-700 transition-colors duration-300">
-                    Desarrollo
-                  </Link>
-                </li>
-                <li className="p-2">
-                  <Link href="/servicios/diseno-grafico" className="block text-black hover:text-gray-700 transition-colors duration-300">
-                    Diseño Gráfico
-                  </Link>
-                </li>
-              </ul>
-            )}
-          </div>
+          <Link href="/Servicios" className={`text-black hover:text-gray-700 transition-colors duration-300`}>
+            Servicios
+          </Link>
           <Link href="/contacto" className={`text-black hover:text-gray-700 transition-colors duration-300`}>
             Contacto
           </Link>
