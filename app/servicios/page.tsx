@@ -1,107 +1,101 @@
 import Link from 'next/link';
 import React from 'react';
-import '../globals.css'; // Asegúrate de tener estilos globales bien definidos
+import Image from 'next/image';
+import styles from './page.module.css';
 
 export default function Servicios() {
   return (
-    <main className="bg-gray-100 min-h-screen p-8">
+    <div className={styles.container}>
       {/* Sección de encabezado */}
-       <section className="text-center mb-16">
-        <h1 className="text-5xl font-bold font-geist text-gray-800 mb-4">Nuestros Servicios</h1>
-        <p className="text-lg text-gray-600">
+      <section className={styles.hero}>
+        <h1 className={styles.title}>Nuestros Servicios</h1>
+        <p className={styles.description}>
           En Path, ofrecemos soluciones tecnológicas adaptadas a tus necesidades. Descubre nuestros principales servicios:
         </p>
       </section>
 
       {/* Servicios de Desarrollo */}
-      <section className="text-center mb-16">
-        <h2 className="text-3xl font-bold font-geist text-gray-800 mb-8">Desarrollo</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className={styles.foundation}>
+        <h2 className={styles.subtitle}>Desarrollo</h2>
+        <div className={styles.serviceGrid}>
           {/* Servicio 1 */}
-          <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">Web Mastery</h3>
-            <p className="text-gray-600 mb-6">
+          <div className={styles.serviceItem}>
+            <Image src="/takeover.avif" alt="Web Mastery" width={300} height={200} className={styles.serviceImage} />
+            <h3 className={styles.serviceName}>Web Mastery</h3>
+            <p className={styles.serviceDescription}>
               Creamos sitios web de alta calidad y rendimiento utilizando tecnologías avanzadas como HTML5, CSS3 y JavaScript.
             </p>
             <Link href="/contacto">
-              <button className="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">
-                Contáctanos
-              </button>
+              <button className={styles.serviceButton}>Contáctanos</button>
             </Link>
           </div>
 
           {/* Servicio 2 */}
-          <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">E-Shop Pro</h3>
-            <p className="text-gray-600 mb-6">
+          <div className={styles.serviceItem}>
+            <Image src="/spheres-light.avif" alt="E-Shop Pro" width={300} height={200} className={styles.serviceImage} />
+            <h3 className={styles.serviceName}>E-Shop Pro</h3>
+            <p className={styles.serviceDescription}>
               Desarrollamos plataformas e-commerce optimizadas para que vendas más, integradas con sistemas de pago y gestión.
             </p>
             <Link href="/contacto">
-              <button className="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">
-                Obtén una Cotización
-              </button>
+              <button className={styles.serviceButton}>Obtén una Cotización</button>
             </Link>
           </div>
 
           {/* Servicio 3 */}
-          <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">Virtual Learning Hub</h3>
-            <p className="text-gray-600 mb-6">
+          <div className={styles.serviceItem}>
+            <Image src="/takeover.avif" alt="Virtual Learning Hub" width={300} height={200} className={styles.serviceImage} />
+            <h3 className={styles.serviceName}>Virtual Learning Hub</h3>
+            <p className={styles.serviceDescription}>
               Diseñamos aulas virtuales robustas para la enseñanza a distancia con opciones personalizables y fáciles de usar.
             </p>
             <Link href="/contacto">
-              <button className="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">
-                Más Información
-              </button>
+              <button className={styles.serviceButton}>Más Información</button>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Servicios de Diseño Gráfico */}
-      <section className="text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">Diseño Gráfico</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className={styles.foundation}>
+        <h2 className={styles.subtitle}>Diseño Gráfico</h2>
+        <div className={styles.serviceGrid}>
           {/* Servicio 1 */}
-          <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">Brand Identity</h3>
-            <p className="text-gray-600 mb-6">
+          <div className={styles.serviceItem}>
+            <Image src="/spheres-light.avif" alt="Brand Identity" width={300} height={200} className={styles.serviceImage} />
+            <h3 className={styles.serviceName}>Brand Identity</h3>
+            <p className={styles.serviceDescription}>
               Creamos logotipos e imagen corporativa que representan fielmente los valores y la esencia de tu empresa.
             </p>
             <Link href="/contacto">
-              <button className="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">
-                Ver más
-              </button>
+              <button className={styles.serviceButton}>Ver más</button>
             </Link>
           </div>
 
           {/* Servicio 2 */}
-          <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">Commercial Print Suite</h3>
-            <p className="text-gray-600 mb-6">
+          <div className={styles.serviceItem}>
+            <Image src="/takeover.avif" alt="Commercial Print Suite" width={300} height={200} className={styles.serviceImage} />
+            <h3 className={styles.serviceName}>Commercial Print Suite</h3>
+            <p className={styles.serviceDescription}>
               Diseñamos papelería comercial desde tarjetas de presentación hasta sobres, alineados con la imagen de tu marca.
             </p>
             <Link href="/contacto">
-              <button className="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">
-                Ver más
-              </button>
+              <button className={styles.serviceButton}>Ver más</button>
             </Link>
           </div>
-
           {/* Servicio 3 */}
-          <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-700 mb-4">Digital Buzz</h3>
-            <p className="text-gray-600 mb-6">
+          <div className={styles.serviceItem}>
+            <Image src="/spheres-light.avif" alt="Digital Buzz" width={300} height={200} className={styles.serviceImage} />
+            <h3 className={styles.serviceName}>Digital Buzz</h3>
+            <p className={styles.serviceDescription}>
               Administramos y diseñamos contenido para redes sociales, con estrategias para potenciar tu marca en el mundo digital.
             </p>
             <Link href="/contacto">
-              <button className="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">
-                Ver más
-              </button>
+              <button className={styles.serviceButton}>Ver más</button>
             </Link>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

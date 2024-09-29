@@ -1,15 +1,12 @@
-/* app/page.module.css */
-
 .container {
   padding: 0;
   background-color: var(--background);
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 0;
-  background-image: url('/hero.jpg'); /* Placeholder para imagen de fondo */
+  background-image: url('/demo-imagen1.jpg'); /* Placeholder para imagen de fondo */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -48,20 +45,7 @@
   justify-content: center;
   gap: 1rem;
 }
-/*Seccion servicios*/
-.imagen-servicio {
-  animation: mover 2s infinite;
-}
 
-@keyframes mover {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(20px);
-  }
-}
-/* Sección de Fundación */
 .foundation {
   text-align: center;
   padding: 4rem 0;
@@ -79,13 +63,6 @@
   color: var(--primary);
 }
 
-.foundation p {
-  font-size: 1.2rem;
-  color: var(--foreground);
-  margin-top: 1rem;
-}
-
-/* Sección de Servicios */
 .services {
   display: flex;
   justify-content: space-around;
@@ -113,24 +90,4 @@
 .serviceItem p {
   font-size: 1rem;
   color: var(--foreground);
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .hero .title {
-    font-size: 2.5rem;
-  }
-
-  .hero .description {
-    font-size: 1.2rem;
-  }
-
-  .services {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .serviceItem {
-    max-width: 90%;
-  }
 }

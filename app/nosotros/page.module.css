@@ -1,11 +1,20 @@
+/* app/page.module.css */
+
+.container {
+  padding: 0;
+  background-color: var(--background);
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 0;
-  background-image: url('/hero3.jpg'); /* Placeholder para imagen de fondo */
+  background-image: url('/hero2.jpg'); /* Placeholder para imagen de fondo */
   background-size: cover;
   background-position: center;
   position: relative;
 }
+
 .hero::before {
   content: '';
   position: absolute;
@@ -15,6 +24,7 @@
   height: 100%;
   background-color: rgba(42, 71, 96, 0.6); /* Overlay azul oscuro */
 }
+
 .hero .title {
   position: relative;
   font-size: 3rem;
@@ -37,18 +47,6 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-}
-
-
-.title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 18px;
-  margin-bottom: 40px;
 }
 
 /* Sección de Fundación */
@@ -75,19 +73,39 @@
   margin-top: 1rem;
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero .title {
+    font-size: 2.5rem;
+  }
+
+  .hero .description {
+    font-size: 1.2rem;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .serviceItem {
+    max-width: 90%;
+  }
+}
+/*Equipo*/
 .subtitle {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.serviceGrid {
+.teamGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.serviceItem {
+.teamMember {
   background-color: #fff;
   padding: 20px;
   border: 1px solid #ddd;
@@ -95,26 +113,49 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.serviceImage {
+.teamImage {
   width: 100%;
-  height: 150px;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.serviceName {
+.teamName {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.serviceDescription {
+.teamRole {
   font-size: 16px;
   color: #666;
   margin-bottom: 20px;
 }
 
-.serviceButton {
+.socialLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.socialIcon {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #333;
+}
+
+/* Estilos adicionales para la página de inicio */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.primaryBtn {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
@@ -123,6 +164,18 @@
   cursor: pointer;
 }
 
-.serviceButton:hover {
-  background-color: #444;
+.secondaryBtn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.foundationImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }

@@ -2,7 +2,7 @@
 "use client";  // Esto marca el componente como un Client Component
 import React, { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import '../globals.css';
+import './page.module.css';
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
