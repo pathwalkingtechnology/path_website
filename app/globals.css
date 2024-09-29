@@ -35,9 +35,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button {
-  font-family: 'GeistMono', monospace;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  background-color: var(--secondary); /* Celeste */
 }
 
 button.primaryBtn {
@@ -95,5 +98,13 @@ button.secondaryBtn:hover {
   }
   100% {
     transform: translate(10px, 10px);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem; /* Reducir padding en móviles */
+  }
+  .md\:hidden {
+    padding: 10px; /* Añadir más espaciado */
   }
 }
