@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";  // Esto marca el componente como un Client Component
 import React, { useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 import '../globals.css';
-
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -20,36 +20,36 @@ export default function Contacto() {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  try {
-    const response = await fetch('/api/sendEmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (response.ok) {
-      alert('Gracias por contactarnos, te responderemos pronto.');
-      setFormData({ nombre: '', email: '', mensaje: '' });
-    } else {
-      alert('Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.');
+      if (response.ok) {
+        alert('Gracias por contactarnos, te responderemos pronto.');
+        setFormData({ nombre: '', email: '', mensaje: '' });
+      } else {
+        alert('Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error enviando el formulario:', error);
+      alert('Hubo un error al enviar tu mensaje.');
     }
-  } catch (error) {
-    console.error('Error enviando el formulario:', error);
-    alert('Hubo un error al enviar tu mensaje.');
-  }
-};
-
+  };
 
   return (
-    <main className="bg-background min-h-screen p-8">
+    <main className="bg-gray-50 min-h-screen p-8">
       <section className="text-center mb-16">
-        <h1 className="text-4xl font-bold font-geist text-primary mb-4">Contáctanos</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">Contáctanos</h1>
         <p className="text-lg font-sans text-text mb-6">
-          Completa el formulario para enviarnos tus consultas o comunícate con nosotros a través de WhatsApp.
+          ¿Tienes alguna pregunta o proyecto en mente? Nos encantaría ayudarte a llevar tu visión al siguiente nivel. Completa el formulario o 
+          comunícate con nosotros directamente por WhatsApp.
         </p>
 
         {/* Botón de WhatsApp */}
@@ -59,6 +59,7 @@ export default function Contacto() {
           rel="noopener noreferrer"
           className="inline-block bg-secondary text-white py-3 px-6 rounded-md font-semibold mb-8 hover:bg-primary transition duration-300"
         >
+          <FaWhatsapp className="inline-block mr-2" />
           Escríbenos por WhatsApp
         </a>
       </section>
@@ -76,7 +77,7 @@ export default function Contacto() {
               name="nombre"
               value={formData.nombre}
               onChange={handleInputChange}
-              className="w-full p-3 border rounded focus:outline-none focus:border-primary"
+              className="w-full p-3 border rounded focus:outline-none focus:border-secondary"
               required
             />
           </div>
@@ -91,7 +92,7 @@ export default function Contacto() {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full p-3 border rounded focus:outline-none focus:border-primary"
+              className="w-full p-3 border rounded focus:outline-none focus:border-secondary"
               required
             />
           </div>
@@ -105,7 +106,7 @@ export default function Contacto() {
               name="mensaje"
               value={formData.mensaje}
               onChange={handleInputChange}
-              className="w-full p-3 border rounded focus:outline-none focus:border-primary"
+              className="w-full p-3 border rounded focus:outline-none focus:border-secondary"
               rows={5}
               required
             ></textarea>

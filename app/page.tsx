@@ -7,44 +7,20 @@ export default function Home() {
     <div className={styles.container}>
     
     
-      {/* Built on a foundation */}
-      <section className={styles.foundation}>
-  <Image
-    src="/takeover.avif"  // Imagen placeholder
-    alt="Built on a foundation of fast, production-grade tooling"
-    width={700}
-    height={400}
-    className={styles.foundationImage}
-  />
-  <h2>Built on a foundation of fast, production-grade tooling</h2>
-</section>
-    
+      
       {/* Hero section similar to Next.js */}
     <section className={styles.hero}>
   <h1 className={styles.title}>Path - Walking Technology</h1>
   <p className={styles.description}>
-    Empowering businesses with innovative technology solutions.
+    Empoderar a las empresas con soluciones tecnológicas innovadoras.
   </p>
   <div className={styles.buttons}>
-    <button className={styles.primaryBtn}>Get Started</button>
-    <button className={styles.secondaryBtn}>Learn More</button>
+    <button className={styles.primaryBtn}>Empezar ya!</button>
+    <button className={styles.secondaryBtn}>Aprende más</button>
   </div>
 </section>
 
-      {/* Sección de Servicios */}
-      <section className={styles.services}>
-        <div className={styles.serviceItem}>
-          <h2>Development</h2>
-          <p>We offer state-of-the-art development solutions to help your business thrive.</p>
-        </div>
-        <div className={styles.serviceItem}>
-          <h2>Graphic Design</h2>
-          <p>Our creative team brings your brand to life with stunning visuals.</p>
-        </div>
-      </section>
-
-      {/* Built on a foundation */}
-      <section className={styles.foundation}>
+ <section className={styles.foundation}>
   <Image
     src="/takeover.avif"  // Imagen placeholder
     alt="Built on a foundation of fast, production-grade tooling"
@@ -52,9 +28,23 @@ export default function Home() {
     height={400}
     className={styles.foundationImage}
   />
-  <h2>Built on a foundation of fast, production-grade tooling</h2>
+  <h2>Construido sobre una base de herramientas rápidas y de calidad de producción</h2>
 </section>
-    </div>
+
+
+      {/* Sección de Servicios */}
+      <section className={styles.services}>
+        <div className={styles.serviceItem}>
+          <h2>Desarrollo</h2>
+          <p>Ofrecemos soluciones de desarrollo de última generación para ayudar a que su negocio prospere.</p>
+        </div>
+        <div className={styles.serviceItem}>
+          <h2>Diseño Gráfico</h2>
+          <p>Nuestro equipo creativo le da vida a su marca con imágenes impresionantes.</p>
+        </div>
+      </section>
+
+   </div>
   );
 }
 

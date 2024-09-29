@@ -24,7 +24,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`${isScrolled ? 'bg-transparent' : 'bg-white shadow-md'} fixed top-0 left-0 w-full z-50 transition-colors duration-300 py-4`}>
+    <header className={`${isScrolled ? 'bg-grey' : 'bg-white shadow-md'} fixed top-0 left-0 w-full z-50 transition-colors duration-300 py-4`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
           {/* Logo */}
@@ -43,7 +43,7 @@ export default function Header() {
           <Link href="/nosotros" className={`text-black hover:text-gray-700 transition-colors duration-300`}>
             Nosotros
           </Link>
-          <Link href="/Servicios" className={`text-black hover:text-gray-700 transition-colors duration-300`}>
+          <Link href="/servicios" className={`text-black hover:text-gray-700 transition-colors duration-300`}>
             Servicios
           </Link>
           <Link href="/contacto" className={`text-black hover:text-gray-700 transition-colors duration-300`}>
