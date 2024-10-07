@@ -28,6 +28,7 @@ export default function Header() {
     <header className={`${isScrolled ? 'bg-white' : 'bg-white shadow-md'} fixed top-0 left-0 w-full z-50 transition-colors duration-300 py-4`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
+         <Link href="/" className={`text-primary hover:text-secondary transition-colors duration-300`}>
   <Image 
     src="/logo-web.png" 
     alt="Path Logo" 
@@ -35,18 +36,10 @@ export default function Header() {
     height={isMobileMenuOpen ? 60 : 80}
     className="w-32 md:w-48"  // Ajuste para dispositivos móviles
   />
+   </Link>
 </div>
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className={`text-primary hover:text-secondary transition-colors duration-300`}>
-            Inicio
-          </Link>
-          <Link href="/nosotros" className={`text-primary hover:text-secondary transition-colors duration-300`}>
-            Nosotros
-          </Link>
-          <Link href="/servicios" className={`text-primary hover:text-secondary transition-colors duration-300`}>
-            Servicios
-          </Link>
           <Link href="/contacto" className={`text-primary hover:text-secondary transition-colors duration-300`}>
             Contacto
           </Link>
@@ -65,16 +58,6 @@ export default function Header() {
             <li>
               <Link href="/" className="text-primary hover:text-secondary transition-colors duration-300" onClick={toggleMobileMenu}>
                 Inicio
-              </Link>
-            </li>
-            <li>
-              <Link href="/nosotros" className="text-primary hover:text-secondary transition-colors duration-300" onClick={toggleMobileMenu}>
-                Nosotros
-              </Link>
-            </li>
-            <li>
-              <Link href="/servicios" className="text-primary hover:text-secondary transition-colors duration-300" onClick={toggleMobileMenu}>
-                Servicios
               </Link>
             </li>
             <li>

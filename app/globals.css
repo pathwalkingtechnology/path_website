@@ -87,17 +87,17 @@ button.secondaryBtn:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-  animation: lightmove 3s infinite;
+  border: 0px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  animation: lightmove 15s infinite;
 }
 
 @keyframes lightmove {
   0% {
-    transform: translate(-10px, -10px);
+    transform: translate(-10px, 10px);
   }
   100% {
-    transform: translate(10px, 10px);
+    transform: translate(0px, 220px);
   }
 }
 @media (max-width: 768px) {
