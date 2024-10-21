@@ -5,7 +5,7 @@ const HomePage = () => {
     <section
       className="hero bg-cover bg-center h-screen flex items-center justify-center"
       style={{
-        backgroundImage: 'url("/intro.jpg")',
+        backgroundImage: 'url("/banner4.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
