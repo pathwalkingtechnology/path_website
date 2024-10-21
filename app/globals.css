@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variables de color */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,17 +15,21 @@
   }
 }
 
+/* Estilos globales */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'GeistVF', sans-serif; /* Aplicar fuente Geist para todo el sitio */
 }
 
+/* Utilidades personalizadas */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+/* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -32,14 +37,15 @@ body {
   align-items: center;
   height: 100vh;
 }
-/* pagina servicios */
+
+/* Página de servicios */
 .servicios-container {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-card);
 }
 
 .servicios-titulo {
@@ -53,14 +59,14 @@ body {
   padding: 20px;
   border: 1px solid #ddd;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-card);
 }
 
 .servicios-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--rounded-card);
 }
 
 .servicios-item h2 {
@@ -71,55 +77,17 @@ body {
 
 .servicios-item p {
   font-size: 18px;
-  color: #666;
+  color: var(--foreground);
   margin-top: 10px;
 }
-/* FIN pagina servicios */
-/* Dispositivos móviles */
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-  .grid-cols-2 {
-    grid-template-columns: 1fr;
-  }
-  .gap-4 {
-    gap: 10px;
-  }
-  .formulario {
-    padding: 10px;
-  }
-}
 
-/* Dispositivos moviles */
-@media (max-width: 480px) {
-  .container {
-    padding: 5px;
-  }
-  .formulario label {
-    font-size: 14px;
-  }
-  .formulario input, .formulario textarea {
-    padding: 5px;
-    font-size: 14px;
-  }
-  .fixed {
-    bottom: 10px;
-    right: 10px;
-  }
-}
-/* FIN Dispositivos moviles */
-
-/* CONTACTOS */
-
-/* Estilos para el formulario */
-
+/* Formulario de contacto */
 .formulario {
   background-color: #f9f9f9;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--rounded-card);
+  box-shadow: var(--shadow-card);
 }
 
 .formulario label {
@@ -127,29 +95,30 @@ body {
   margin-bottom: 10px;
 }
 
-.formulario input, .formulario textarea {
+.formulario input,
+.formulario textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: var(--rounded-card);
 }
 
 .formulario button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: var(--ecoGreen);
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--rounded-card);
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .formulario button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #2f6c4f;
 }
 
 /* Estilos para el botón de WhatsApp */
-
 .fixed {
   position: fixed;
   bottom: 20px;
@@ -157,10 +126,10 @@ body {
 }
 
 .bg-green-500 {
-  background-color: #34C759;
+  background-color: var(--ecoGreen);
 }
 
-.hover:bg-green-700:hover {
+.hover\\:bg-green-700:hover {
   background-color: #2f6c4f;
 }
 
@@ -183,6 +152,39 @@ body {
 }
 
 .rounded {
-  border-radius: 10px;
+  border-radius: var(--rounded-card);
 }
-/* FIN CONTACTOS */
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  .gap-4 {
+    gap: 10px;
+  }
+  .formulario {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+  .formulario label {
+    font-size: 14px;
+  }
+  .formulario input,
+  .formulario textarea {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .fixed {
+    bottom: 10px;
+    right: 10px;
+  }
+}

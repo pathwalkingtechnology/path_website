@@ -11,9 +11,24 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        ecoGreen: "#34C759", // Verde amigable con el medio ambiente
+        techOrange: "#FF8C42", // Naranja tecnológico
+        lightGray: "#f9f9f9", // Fondo claro para contenedores
+        darkGray: "#666", // Texto gris oscuro
+      },
+      fontFamily: {
+        mono: ['GeistMonoVF', 'monospace'], // Fuente personalizada Geist Mono
+        geist: ['GeistVF', 'sans-serif'], // Fuente personalizada Geist
+      },
+      boxShadow: {
+        card: "0 0 10px rgba(0, 0, 0, 0.1)", // Sombra suave para tarjetas
+      },
+      borderRadius: {
+        card: "10px", // Borde redondeado estándar
       },
     },
   },
   plugins: [],
 };
+
 export default config;

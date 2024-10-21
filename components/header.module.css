@@ -1,0 +1,106 @@
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #FFFFFF; /* Color similar al de Deno, oscuro pero moderno */
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Efecto de sombra moderno */
+  background-color: #FFFFFF; /* Mantiene el color al hacer sticky */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+.nav ul li {
+  padding: 10px 0;
+}
+
+.nav ul li a {
+  color: #9cc1a2; /* Color verde suave que denota tecnología amigable con el medio ambiente */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #c5e1a5; /* Efecto de hover más claro */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #9cc1a2; /* Verde tecnológico amigable */
+  transition: all 0.3s ease;
+}
+
+/* Responsiveness for Mobile */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Sticky Effect */
+.sticky {
+  background-color: #FFFFFF;
+}
