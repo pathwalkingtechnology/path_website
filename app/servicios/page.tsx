@@ -11,7 +11,7 @@ const Servicios = () => {
         <Link href="/servicios/presencia-digital">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/presencia-digital.jpg"
+              src="/pic04.jpg"
               alt="Servicios de Presencia Digital"
               width={800}
               height={600}
@@ -29,7 +29,7 @@ const Servicios = () => {
         <Link href="/servicios/tienda-en-linea">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/tienda-en-linea.jpg"
+              src="/pic05.jpg"
               alt="Servicios de Tienda en Línea"
               width={800}
               height={600}
@@ -47,7 +47,7 @@ const Servicios = () => {
         <Link href="/servicios/aprende-en-linea">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/aprende-en-linea.jpg"
+              src="/pic07.jpg"
               alt="Servicios de Aprende en Línea"
               width={800}
               height={600}
@@ -65,7 +65,7 @@ const Servicios = () => {
         <Link href="/servicios/aplicaciones-moviles">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/takeover.avif"
+              src="/presencia-digital.jpg"
               alt="Servicios de Aplicaciones Móviles"
               width={800}
               height={600}
@@ -101,7 +101,7 @@ const Servicios = () => {
         <Link href="/servicios/innovacion-y-tecnologia">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/takeover.avif"
+              src="/tienda-en-linea.jpg"
               alt="Servicios de Innovación y Tecnología"
               width={800}
               height={600}
