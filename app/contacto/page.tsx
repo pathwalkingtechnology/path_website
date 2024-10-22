@@ -4,6 +4,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactPage() {
   const [enviado, setEnviado] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false); // Para mostrar un indicador de carga
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -21,9 +23,11 @@ export default function ContactPage() {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setEnviado(false);
+    setError(false);
+    setLoading(true);
 
     try {
-      const response = await fetch("/api/SendEmail", {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -31,9 +35,14 @@ export default function ContactPage() {
 
       if (response.ok) {
         setEnviado(true);
+      } else {
+        setError(true);
       }
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
+      setError(true);
+    } finally {
+      setLoading(false); // Oculta el indicador de carga
     }
   };
 
@@ -101,12 +110,17 @@ export default function ContactPage() {
         <button
           type="submit"
           className="w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+          disabled={loading} // Deshabilitar botón mientras se envía
         >
-          Enviar
+          {loading ? "Enviando..." : "Enviar"}
         </button>
 
         {enviado && (
           <p className="text-green-600 mt-4 text-center">Formulario enviado con éxito!</p>
+        )}
+
+        {error && (
+          <p className="text-red-600 mt-4 text-center">Error al enviar el formulario. Inténtalo de nuevo.</p>
         )}
       </form>
 
