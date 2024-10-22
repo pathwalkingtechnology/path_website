@@ -11,7 +11,7 @@ const Servicios = () => {
         <Link href="/servicios/presencia-digital">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/pic04.jpg"
+              src="/presencia-digital.jpg"
               alt="Servicios de Presencia Digital"
               width={800}
               height={600}
@@ -29,7 +29,7 @@ const Servicios = () => {
         <Link href="/servicios/tienda-en-linea">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/pic05.jpg"
+              src="/servicio2.jpg"
               alt="Servicios de Tienda en Línea"
               width={800}
               height={600}
@@ -65,7 +65,7 @@ const Servicios = () => {
         <Link href="/servicios/aplicaciones-moviles">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/presencia-digital.jpg"
+              src="/servicio1.jpg"
               alt="Servicios de Aplicaciones Móviles"
               width={800}
               height={600}
@@ -83,7 +83,7 @@ const Servicios = () => {
         <Link href="/servicios/identidad-visual">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/takeover.avif"
+              src="/pic04.jpg"
               alt="Servicios de Identidad Visual"
               width={800}
               height={600}
@@ -101,7 +101,7 @@ const Servicios = () => {
         <Link href="/servicios/innovacion-y-tecnologia">
           <div className="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/tienda-en-linea.jpg"
+              src="/servicio6.jpg"
               alt="Servicios de Innovación y Tecnología"
               width={800}
               height={600}

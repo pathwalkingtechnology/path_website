@@ -4,7 +4,7 @@ const Nosotros = () => {
   return (
     <div className="container mx-auto p-6 rounded-card shadow-card">
    
-      <h1 className="text-5xl font-extrabold text-center mb-6 text-darkGray">
+      <h1 className="text-5xl font-extrabold text-center mb-6 text-ecoGreen">
         En Path, potenciamos tu negocio a través de la tecnología
       </h1>
 
