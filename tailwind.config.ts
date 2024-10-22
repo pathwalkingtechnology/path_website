@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        ecoGreen: "#9cc1a2", // Verde amigable con el medio ambiente
+        ecoGreen: "#416864", // Verde amigable con el medio ambiente
         techOrange: "#FF8C42", // Naranja tecnológico
         lightGray: "#f9f9f9", // Fondo claro para contenedores
         darkGray: "#666", // Texto gris oscuro

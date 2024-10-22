@@ -86,7 +86,7 @@ const IdentidadVisual = () => {
       {/* Columna lateral con otros servicios */}
       <div className="space-y-6">
         {/* Tarjeta de Servicio: Desarrollo Web */}
-        <div className="bg-lightGray rounded-lg shadow-card p-4 hover:bg-ecoGreen transition-colors duration-300">
+        <div className="bg-lightGray rounded-lg shadow-card p-4">
           <h3 className="text-2xl font-bold mb-2 text-techOrange font-geist">
             Desarrollo Web
           </h3>
@@ -94,14 +94,14 @@ const IdentidadVisual = () => {
             Creamos sitios web modernos y responsivos que impulsan tu presencia digital.
           </p>
           <Link href="/servicios/presencia-digital">
-            <button className="text-white bg-techOrange hover:bg-blue-600 font-bold py-2 px-4 rounded-lg mt-4">
+            <button className="text-white bg-techOrange hover:bg-ecoGreen font-bold py-2 px-4 rounded-lg mt-4">
               Ver más
             </button>
           </Link>
         </div>
 
         {/* Tarjeta de Servicio: E-commerce */}
-        <div className="bg-lightGray rounded-lg shadow-card p-4 hover:bg-ecoGreen transition-colors duration-300">
+        <div className="bg-lightGray rounded-lg shadow-card p-4">
           <h3 className="text-2xl font-bold mb-2 text-techOrange font-geist">
             E-commerce
           </h3>
@@ -109,14 +109,14 @@ const IdentidadVisual = () => {
             Diseñamos tiendas online que maximizan tus ventas y mejoran la experiencia del usuario.
           </p>
           <Link href="/servicios/tienda-en-linea">
-            <button className="text-white bg-techOrange hover:bg-blue-600 font-bold py-2 px-4 rounded-lg mt-4">
+            <button className="text-white bg-techOrange hover:bg-ecoGreen font-bold py-2 px-4 rounded-lg mt-4">
               Ver más
             </button>
           </Link>
         </div>
 
         {/* Tarjeta de Servicio: Aplicaciones Móviles */}
-        <div className="bg-lightGray rounded-lg shadow-card p-4 hover:bg-ecoGreen transition-colors duration-300">
+        <div className="bg-lightGray rounded-lg shadow-card p-4">
           <h3 className="text-2xl font-bold mb-2 text-techOrange font-geist">
             Aplicaciones Móviles
           </h3>
@@ -124,7 +124,7 @@ const IdentidadVisual = () => {
             Desarrollamos aplicaciones escalables e innovadoras para cualquier plataforma.
           </p>
           <Link href="/servicios/aplicaciones-moviles">
-            <button className="text-white bg-techOrange hover:bg-blue-600 font-bold py-2 px-4 rounded-lg mt-4">
+            <button className="text-white bg-techOrange hover:bg-ecoGreen font-bold py-2 px-4 rounded-lg mt-4">
               Ver más
             </button>
           </Link>
